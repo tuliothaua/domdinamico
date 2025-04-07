@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: rgb(34, 32, 32);
+            color: white;
+        }
+
+        .titulo {
+
+            color: wheat;
+            text-shadow: 5px 5px 17px black;
+            background-color: rgba(0, 0, 0, 0.171);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .dom {
+            font-style: italic;
+            margin: 50px;
+            color: rgb(0, 0, 0);
+            text-shadow: 5px 5px 11px rgb(71, 62, 22);
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.171);
+	        position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        button:hover {
+            background: #63525a;
+            transform: scale(1.2);
+}
+
+        button {
+            font-family: 'Franklin Gothic Medium';
+            margin: 3%;
+            text-decoration: none;
+            color: black;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 10px;
+            transition: 0.2s;
+}
+
+        h5 {
+            color: rgba(255, 255, 255, 0.507);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">- SEJA BEM VINDO -</h1>
+
+    <h2 class="dom">MEXENDO COM DOM</h2>
+
+    <h3>Para mudar o conteúdo basta clicar nos botões abaixo.</h3>
+        <h2 id="tn2">TITULO EXEMPLO</h2>
+        <p id="pa1">PARÁGRAFO EXEMPLO</p>
+
+    <div id="btn">
+        <button id="btn1" onclick="click1()">MUDAR O TITÚLO</button>
+        <button id="btn2" onclick="click2()">MUDAR O PARÁGRAFO</button>
+        <button id="btn2" onclick="click3()">MUDAR A COR</button>
+    </div>
+
+    <h5>resuminho do site, o famoso botão de número "1" altera a frase escrita do exemplo "TÍTULO EXEMPLO", basta você digitar, da mesma forma com o botão de número "2" altera o "PARÁGRAFO EXEMPLO", o botão de número "3" altera a cor de cada um basta selecionar 1 para título ou 2 para parágrafo, e digitar a cor em inglês ou o código hexadecimal.</h5>
+    <script> 
+      
+       function click1(){
+            let tn2 = document.getElementById("tn2");
+            let frase = prompt("Digite o que deseja mudar no titulo de exemplo: ");
+            tn2.innerText = frase;
+       }
+
+       function click2(){
+            let pa1 = document.getElementById("pa1");
+            let frase = prompt("Digite o que deseja mudar no parágrafo de exemplo: ");
+            pa1.innerText = frase;
+       }
+
+       function click3(){
+            var opt = prompt("Deseja mudar a cor do \n1 - titulo || 2 - paragrafo?: ");
+
+        if (opt == 1){
+            var cor = prompt("Digite a cor (ex: red, blue, #ff6600):");
+            tn2.style.color = cor; 
+        } else if (opt == 2){
+            var cor = prompt("Digite a cor (ex: red, blue, #ff6600):");
+            pa1.style.color = cor;
+        } else {
+            confirm("Você indicou uma opção errada deseja revisar? apenas 1 ou 2! :D");
+        }
+    }
+
+        
+
+
+    </script>
+    <footer><b>&copy; TúlioThauãDutra</b></footer>
+</body>
+</html>
